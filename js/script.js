@@ -43,6 +43,5 @@ function myButtonClicked() {
       answer = answer + counter1;
     }
   }
-  
-  document.getElementById("answer").innerHTML = counter1 + " x " + addedNumber + " = " + answer;
+      document.getElementById("answer").innerHTML = counter1 + " x " + addedNumber + " = " + answer;
 }
