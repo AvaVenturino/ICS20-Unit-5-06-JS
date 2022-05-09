@@ -17,18 +17,32 @@ if (navigator.serviceWorker) {
  * Input
  */
 function myButtonClicked() {
-  var sideA = document.getElementById("sideA").value;
-  var sideB = document.getElementById("sideB").value;
-  var sideC = document.getElementById("sideC").value;
+  const counter1 = parseInt(document.getElementById('counter1').value)
+	const counter2 = parseInt(document.getElementById('counter2').value)
+  var addedNumber = 0
+  var answer = 0
 
-  // process
-  if (sideA == sideB && sideB == sideC) {
-    document.getElementById("answer").innerHTML =
-      "This is an equilateral triangle!";
-  } else if (sideA == sideB || sideB == sideC || sideA == sideC) {
-    document.getElementById("answer").innerHTML =
-      "This is an isosceles triangle!";
-  } else {
-    document.getElementById("answer").innerHTML = "This is a scalene triangle!";
+  if (counter1 > 0 && counter2 > 0) {
+    while (addedNumber < counter2) {
+      addedNumber = addedNumber + 1;
+      answer = answer + counter1;
+    }
+  } else if (counter1 < 0 && counter2 < 0) {
+    while (addedNumber > counter2) {
+      addedNumber = addedNumber - 1;
+      answer = answer - counter1;
+    }
+  } else if (counter1 > 0 && counter2 < 0) {
+    while (addedNumber > counter2) {
+      addedNumber = addedNumber - 1;
+      answer = answer - counter1;
+    }
+  } else if (counter1 < 0 && counter2 > 0) {
+    while (addedNumber < counter2) {
+      addedNumber = addedNumber + 1;
+      answer = answer + counter1;
+    }
   }
+  
+  document.getElementById('answer').innerHTML = counter1 + " x " + addedNumber + " = " + answer;
 }
