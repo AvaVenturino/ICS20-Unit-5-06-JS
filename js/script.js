@@ -17,10 +17,10 @@ if (navigator.serviceWorker) {
  * Input
  */
 function myButtonClicked() {
-  const counter1 = parseInt(document.getElementById('counter1').value)
-	const counter2 = parseInt(document.getElementById('counter2').value)
-  var addedNumber = 0
-  var answer = 0
+  const counter1 = parseInt(document.getElementById("counter1").value)
+	const counter2 = parseInt(document.getElementById("counter2").value)
+  var addedNumber = 0;
+  var answer = 0;
 
   if (counter1 > 0 && counter2 > 0) {
     while (addedNumber < counter2) {
@@ -43,6 +43,5 @@ function myButtonClicked() {
       answer = answer + counter1;
     }
   }
-  
-  document.getElementById('answer').innerHTML = counter1 + " x " + addedNumber + " = " + answer;
+  document.getElementById("answer").innerHTML = counter1 + " x " + addedNumber + " = " + answer;
 }
